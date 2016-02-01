@@ -1,3 +1,8 @@
+% Cleaning.
+clc;
+clearvars;
+close all;
+
 % Original signals.
 f = {[1, 2, 3, 4];
      1i*[1, 2, 3, 4];
@@ -10,6 +15,7 @@ f = {[1, 2, 3, 4];
 K = length(f);
 
 % Calculations for each signal.
+F = cell(K, 1);
 for k = 1:K
     % Fourier transform.
     F{k} = fft(f{k});
