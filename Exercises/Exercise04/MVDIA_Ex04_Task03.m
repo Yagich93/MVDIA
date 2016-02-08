@@ -13,10 +13,13 @@ img = rgb2gray(img);
 % Histogram equalization.
 [imgeh, ~] = histeq(img);
 
+% Image difference.
+imgd = imabsdiff(img,imgeh);
+
 % Plotting.
 figure('name', 'Histograms');
 subx = 2;
-suby = 2;
+suby = 3;
 subc = 0;
 % Original img.
 subc = subc + 1;
@@ -34,3 +37,7 @@ imshow(imgeh);
 subc = subc + 1;
 subplot(suby, subx, subc);
 imhist(imgeh);
+% Img difference.
+subc = subc + 1;
+subplot(suby, subx, subc);
+imshow(imgd);
