@@ -16,6 +16,14 @@ img = rgb2gray(img);
 % Image difference.
 imgd = imabsdiff(img,imgeh);
 
+% New histogram construction.
+n = 256;
+hgram = ones(1,n);
+for i = n/2:n
+    hgram(i) = hgram(i) - (i-n/2)*2/n;
+end
+hgram = hgram/sum(hgram)*numel(img);
+
 % Plotting.
 figure('name', 'Histograms');
 subx = 2;
@@ -41,3 +49,8 @@ imhist(imgeh);
 subc = subc + 1;
 subplot(suby, subx, subc);
 imshow(imgd);
+% Plot new histogram.
+subc = subc + 1;
+subplot(suby, subx, subc);
+plot(1:n,hgram);
+axis([0 n 0 max(hgram)]);
