@@ -27,9 +27,16 @@ hgram = hgram/sum(hgram)*numel(img);
 % New image.
 imgn = histeq(img,hgram);
 
+% Second new histogram construction.
+hgram2 = gausswin(n);
+hgram2 = hgram2/sum(hgram2)*numel(img);
+
+% Second new image.
+imgn2 = histeq(img,hgram2);
+
 % Plotting.
 figure('name', 'Histograms');
-subx = 2;
+subx = 3;
 suby = 4;
 subc = 0;
 % Original img.
@@ -41,6 +48,7 @@ subc = subc + 1;
 subplot(suby, subx, subc);
 imhist(img);
 % Img with equalized hist.
+subc = subc + 1;
 subc = subc + 1;
 subplot(suby, subx, subc);
 imshow(imgeh);
@@ -65,3 +73,16 @@ imshow(imgn);
 subc = subc + 1;
 subplot(suby, subx, subc);
 imhist(imgn);
+% Plot new histogram.
+subc = subc + 1;
+subplot(suby, subx, subc);
+plot(1:n,hgram2);
+axis([0 n 0 max(hgram2)]);
+% New img.
+subc = subc + 1;
+subplot(suby, subx, subc);
+imshow(imgn2);
+% New hist.
+subc = subc + 1;
+subplot(suby, subx, subc);
+imhist(imgn2);
