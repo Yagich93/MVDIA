@@ -1,3 +1,12 @@
 MVDIA Assignment TODO
 
 - Presentation
+- Opponing
+
+Requirements:
+- Theoretical background (literature)
+- Solution for the problem (implementation)
+- Presentation (same topic)
+- 6-10-page report
+- Opponing
+-- My idea: We might send the ready questions to opponents beforehand
