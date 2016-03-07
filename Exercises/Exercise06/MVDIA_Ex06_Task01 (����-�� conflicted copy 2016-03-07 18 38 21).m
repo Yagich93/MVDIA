@@ -1,8 +1,4 @@
-% Median and adaptive median filtering.
-%
-% NOTE: The script might not run because of the forward/backward-slash
-% issue in paths to images. Choose the correct slashes, according to your
-% system.
+% Median and adoptive median filtering.
 % 
 % The input image for the experiment has an intensive salt&pepper noise.
 % Any details are hardly recognizible in it.
@@ -16,13 +12,9 @@
 % corrupt image details much. The resulting image seems to be blurred and
 % the borders - distorted.
 %
-% Adaptive median filters reduce approximately the same amount of noise, as
-% median filters with the window size of the maximal adaptive window size.
-% On the other hand, adaptive median filters retain the image details, that
-% cannot be seen both on original and on median-filtered (and thus blurred)
-% images. The borders are corrupted much less as well.
+% 
 %
-% The function for adaptive median filtering is taken from Gonzalez, Woods
+% The function for adoptive median filtering is taken from Gonzalez, Woods
 % et al.
 
 % Cleaning.
