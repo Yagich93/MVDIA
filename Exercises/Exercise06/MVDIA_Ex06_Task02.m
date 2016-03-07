@@ -33,8 +33,8 @@ sp = @(F)log(abs(F))./max(max(log(abs(F))));
 % Plotting.
 figure('name', 'Periodic noise reduction');
 plotI = {img, imgnp, imgnl, sp(F), sp(Fnp), sp(Fnl)};
-plotTitles = {'Original', 'Original spectrum', 'No peaks',...
-              'No peaks spectrum', 'No lines', 'No lines spectrum'};
+plotTitles = {'Original', 'No peaks', 'No lines',...
+           'Original spectrum', 'No peaks spectrum', 'No lines spectrum'};
 subx = ceil(size(plotI, 2)/2);
 suby = 2;
 for subc = 1:size(plotI, 2);
