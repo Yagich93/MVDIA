@@ -27,14 +27,23 @@ Fnl(:, 129) = 0;
 Fnl(:, 385) = 0;
 imgnl = uint8(ifft2(ifftshift(Fnl)));
 
+% Remove secondary bands.
+Fnb = F;
+Fnb(224:226, :) = 0;
+Fnb(288:290, :) = 0;
+Fnb(:, 128:130) = 0;
+Fnb(:, 384:386) = 0;
+imgnb = uint8(ifft2(ifftshift(Fnb)));
+
 % Function for spectrum processing for plotting.
 sp = @(F)log(abs(F))./max(max(log(abs(F))));
 
 % Plotting.
 figure('name', 'Periodic noise reduction');
-plotI = {img, imgnp, imgnl, sp(F), sp(Fnp), sp(Fnl)};
-plotTitles = {'Original', 'No peaks', 'No lines',...
-           'Original spectrum', 'No peaks spectrum', 'No lines spectrum'};
+plotI = {img, imgnp, imgnl, imgnb, sp(F), sp(Fnp), sp(Fnl), sp(Fnb)};
+plotTitles = {'Original', 'No peaks', 'No lines', 'No bands',...
+              'Original spectrum', 'No peaks spectrum',...
+              'No lines spectrum', 'No bands spectrum'};
 subx = ceil(size(plotI, 2)/2);
 suby = 2;
 for subc = 1:size(plotI, 2);
