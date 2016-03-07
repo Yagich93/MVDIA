@@ -53,7 +53,7 @@ plotTitles = {'Original', 'Median 3x3 (x1)', 'Median 3x3 (x2)',...
               'Original', 'Adaptive median 5x5', 'Adaptive median 7x7'};
 subx = 3;
 suby = ceil(size(plotI, 2)/3);
-for subc = 1:size(plotI, 2);
+for subc = 1:size(plotI, 2)
     subplot(suby, subx, subc);
     imshow(plotI{subc});
     title(plotTitles{subc});

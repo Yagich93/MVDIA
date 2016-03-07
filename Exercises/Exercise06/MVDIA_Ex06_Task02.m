@@ -79,7 +79,7 @@ plotTitles = {'Original', 'No peaks', 'No lines', 'No bands',...
               'No lines spectrum', 'No bands spectrum'};
 subx = ceil(size(plotI, 2)/2);
 suby = 2;
-for subc = 1:size(plotI, 2);
+for subc = 1:size(plotI, 2)
     subplot(suby, subx, subc);
     imshow(plotI{subc});
     title(plotTitles{subc});
