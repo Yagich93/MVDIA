@@ -11,6 +11,14 @@ img_hsl(:,:,3) = imread('MVDIA_Exercise07_images/ex7t2I.tif');
 % Generate image.
 img = hsl2rgb(double(img_hsl)./255);
 
+% Display values in components.
+disp('H values');
+disp(unique(img_hsl(:,:,1)));
+disp('S values');
+disp(unique(img_hsl(:,:,2)));
+disp('L values');
+disp(unique(img_hsl(:,:,3)));
+
 % Plotting.
 figure('name', 'HSI colors');
 plotI = {img_hsl(:,:,1), img_hsl(:,:,2), img_hsl(:,:,3), img};
