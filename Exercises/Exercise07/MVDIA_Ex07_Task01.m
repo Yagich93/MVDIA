@@ -18,6 +18,12 @@ img = repmat(prof, N, 1, 1);
 % Get HSV channels.
 img_hsv = rgb2hsv(img);
 
+% Display values at N/2.
+disp('RGB');
+disp([img(1,N/2,1), img(1,N/2,2), img(1,N/2,3)]);
+disp('HSV');
+disp([img_hsv(1,N/2,1), img_hsv(1,N/2,2), img_hsv(1,N/2,3)]);
+
 % Plotting.
 subx = 3;
 suby = 2;
