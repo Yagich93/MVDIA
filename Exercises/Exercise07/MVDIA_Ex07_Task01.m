@@ -15,10 +15,17 @@ prof(1,:,3) = 0:1/(N-1):1;
 % Generate image.
 img = repmat(prof, N, 1, 1);
 
+% Get HSV channels.
+img_hsv = rgb2hsv(img);
+
 % Plotting.
+subx = 3;
+suby = 2;
+subc = 0;
 % Plot profiles.
 figure('name', 'Image with profiles');
-subplot(2,1,1);
+subc = subc + 1;
+subplot(suby,subx,subc);
 hold on;
 plot(prof(1,:,1));
 plot(prof(1,:,2));
@@ -26,6 +33,23 @@ plot(prof(1,:,3));
 hold off;
 title('Profiles');
 % Plot image.
-subplot(2,1,2);
+subc = subc + 1;
+subplot(suby,subx,subc);
 imshow(img);
 title('Image');
+% Plot hue.
+subc = subc + 1;
+subc = subc + 1;
+subplot(suby,subx,subc);
+imshow(img_hsv(:,:,1));
+title('Hue');
+% Plot saturation.
+subc = subc + 1;
+subplot(suby,subx,subc);
+imshow(img_hsv(:,:,2));
+title('Saturation');
+% Plot value (Intensity).
+subc = subc + 1;
+subplot(suby,subx,subc);
+imshow(img_hsv(:,:,3));
+title('Value (Intensity)');
