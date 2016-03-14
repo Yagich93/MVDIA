@@ -13,12 +13,12 @@ imgb(:,:,3) = imread('MVDIA_Exercise07_images/ex7t3BB.tif');
 
 % Plotting.
 figure('name', 'Color gradients');
-plotI = {imga(:,:,1), imga(:,:,2), imga(:,:,3),...
-    imgb(:,:,1), imgb(:,:,2), imgb(:,:,3)};
-plotTitles = {'ImageA_R', 'ImageA_G', 'ImageA_B',...
-    'ImageB_R', 'ImageB_G', 'ImageB_B'};
-subx = 3;
-suby = ceil(size(plotI, 2)/3);
+plotI = {imga(:,:,1), imga(:,:,2), imga(:,:,3), imga,...
+    imgb(:,:,1), imgb(:,:,2), imgb(:,:,3), imgb};
+plotTitles = {'ImageA_R', 'ImageA_G', 'ImageA_B', 'ImageA',...
+    'ImageB_R', 'ImageB_G', 'ImageB_B', 'ImageB'};
+subx = 4;
+suby = ceil(size(plotI, 2)/subx);
 for subc = 1:size(plotI, 2)
     subplot(suby, subx, subc);
     imshow(plotI{subc});
