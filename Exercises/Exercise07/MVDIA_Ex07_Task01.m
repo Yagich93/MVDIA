@@ -16,13 +16,13 @@ prof(1,:,3) = 0:1/(N-1):1;
 img = repmat(prof, N, 1, 1);
 
 % Get HSV channels.
-img_hsv = rgb2hsv(img);
+img_hsl = rgb2hsl(img);
 
 % Display values at N/2.
 disp('RGB');
 disp([img(1,N/2,1), img(1,N/2,2), img(1,N/2,3)]);
-disp('HSV');
-disp([img_hsv(1,N/2,1), img_hsv(1,N/2,2), img_hsv(1,N/2,3)]);
+disp('HSL');
+disp([img_hsl(1,N/2,1), img_hsl(1,N/2,2), img_hsl(1,N/2,3)]);
 
 % Plotting.
 subx = 3;
@@ -47,15 +47,15 @@ title('Image');
 subc = subc + 1;
 subc = subc + 1;
 subplot(suby,subx,subc);
-imshow(img_hsv(:,:,1));
+imshow(img_hsl(:,:,1));
 title('Hue');
 % Plot saturation.
 subc = subc + 1;
 subplot(suby,subx,subc);
-imshow(img_hsv(:,:,2));
+imshow(img_hsl(:,:,2));
 title('Saturation');
 % Plot value (Intensity).
 subc = subc + 1;
 subplot(suby,subx,subc);
-imshow(img_hsv(:,:,3));
-title('Value (Intensity)');
+imshow(img_hsl(:,:,3));
+title('Lightness (Intensity)');
