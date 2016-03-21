@@ -1,12 +1,27 @@
 MVDIA Assignment TODO
 
+- Literature exploration
+-- Viola and Jones
+-- Lienhart and Maydt
+-- Messom and Barczak
+-- Search other
+- Application selection
+- Algorithm implementation and application
+- Report
 - Presentation
+- Upload to Moodle (one tar-ball)
 - Opponing
 
 Requirements:
-- Theoretical background (literature)
+- Theoretical background (literature): at least 5 articles
+-- The original article establishing the concept
+-- The latest achievements
+-- Comparisons with the other approaches for a similar application
+-- Critics of the approach
+-- What approaches are better
+-- What is state-of-the-art (most recent level of development)
 - Solution for the problem (implementation)
-- Presentation (same topic)
-- 6-10-page report
+- Presentation (same topic): 20min + 10min of discussion
+- 6-10-page report in the master thesis format (6 pages of actual text, then also the front page, the abstract page, TOC, references, the appendix if needed)
 - Opponing
 -- My idea: We might send the ready questions to opponents beforehand
