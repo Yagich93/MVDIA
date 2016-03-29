@@ -25,3 +25,9 @@ Requirements:
 - 6-10-page report in the master thesis format (6 pages of actual text, then also the front page, the abstract page, TOC, references, the appendix if needed)
 - Opponing
 -- My idea: We might send the ready questions to opponents beforehand
+
+Additional info:
+
+Links:
+- Wiki
+	https://en.wikipedia.org/wiki/Haar-like_features
