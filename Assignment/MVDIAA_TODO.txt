@@ -1,16 +1,11 @@
 MVDIA Assignment TODO
 
-- Literature exploration
--- Viola and Jones
--- Lienhart and Maydt
--- Messom and Barczak
--- Search other
-- Application selection
-- Algorithm implementation and application
-- Report
-- Presentation
-- Upload to Moodle (one tar-ball)
+- Update Presentation
 - Opponing
+-- Download materials from Moodle (assignment feedback section)
+-- Contact Rakkitha to ask, if he wants to cooperate on this one
+-- Explore materials
+-- Outline feedback and questions
 
 Requirements:
 - Theoretical background (literature): at least 5 articles
