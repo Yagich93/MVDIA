@@ -14,6 +14,12 @@ glcm1 = graycomatrix(i1);
 glcm2 = graycomatrix(i2);
 glcm3 = graycomatrix(i3);
 
+% Statistical properties
+% Maximum probability
+mp1 = max(glcm1(:)./sum(glcm1(:)));
+mp2 = max(glcm2(:)./sum(glcm2(:)));
+mp3 = max(glcm3(:)./sum(glcm3(:)));
+
 % Plotting
 figure('name', 'MVDIA_Ex11_Task02');
 is = {i1, i2, i3, glcm1./max(glcm1(:)), glcm2./max(glcm2(:)),...
