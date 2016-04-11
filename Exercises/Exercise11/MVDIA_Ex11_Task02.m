@@ -24,6 +24,11 @@ mp3 = mp(glcm3);
 st1 = graycoprops(glcm1);
 st2 = graycoprops(glcm2);
 st3 = graycoprops(glcm3);
+% Entropy
+en = @(glcm) -sum(glcm(:)./sum(glcm(:)).*log2(glcm(:)./sum(glcm(:))));
+en1 = en(glcm1);
+en2 = en(glcm2);
+en3 = en(glcm3);
 
 % Plotting
 figure('name', 'MVDIA_Ex11_Task02');
