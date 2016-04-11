@@ -16,9 +16,14 @@ glcm3 = graycomatrix(i3);
 
 % Statistical properties
 % Maximum probability
-mp1 = max(glcm1(:)./sum(glcm1(:)));
-mp2 = max(glcm2(:)./sum(glcm2(:)));
-mp3 = max(glcm3(:)./sum(glcm3(:)));
+mp = @(glcm) max(glcm(:)./sum(glcm(:)));
+mp1 = mp(glcm1);
+mp2 = mp(glcm2);
+mp3 = mp(glcm3);
+% Contrast, correlation, energy (uniformity), homogenity
+st1 = graycoprops(glcm1);
+st2 = graycoprops(glcm2);
+st3 = graycoprops(glcm3);
 
 % Plotting
 figure('name', 'MVDIA_Ex11_Task02');
