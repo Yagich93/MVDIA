@@ -30,6 +30,23 @@ en1 = en(glcm1);
 en2 = en(glcm2);
 en3 = en(glcm3);
 
+% Display statistical properties
+drs = @(glmc) fprintf('Reverse size: %f\n', 1/length(glmc(:)));
+dmp = @(mp)   fprintf('Maximum probability: %f\n', mp);
+den = @(en)   fprintf('Entropy: %f\n', en);
+drs(glcm1);
+dmp(mp1);
+den(en1);
+disp(st1);
+drs(glcm2);
+dmp(mp2);
+den(en1);
+disp(st2);
+drs(glcm3);
+dmp(mp3);
+den(en1);
+disp(st3);
+
 % Plotting
 figure('name', 'MVDIA_Ex11_Task02');
 is = {i1, i2, i3, glcm1./max(glcm1(:)), glcm2./max(glcm2(:)),...
