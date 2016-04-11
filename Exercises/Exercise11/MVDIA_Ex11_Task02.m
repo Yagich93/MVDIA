@@ -16,10 +16,11 @@ glcm3 = graycomatrix(i3);
 
 % Plotting
 figure('name', 'MVDIA_Ex11_Task02');
-is = {i1, i2, i3};
-ts = {'Noise', 'Cosine', 'Structures'};
-subx = length(is);
-suby = 1;
+is = {i1, i2, i3, glcm1./max(glcm1(:)), glcm2./max(glcm2(:)),...
+      glcm3./max(glcm3(:))};
+ts = {'Noise', 'Cosine', 'Microscheme', 'GLCM1', 'GLCM2', 'GLCM3'};
+subx = length(is)/2;
+suby = 2;
 for subc = 1:length(is)
     subplot(suby, subx, subc);
     imshow(is{subc});
